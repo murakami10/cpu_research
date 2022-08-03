@@ -1,4 +1,4 @@
-FROM alpine
-RUN apk --no-cache add apache2-utils
+FROM ubuntu:20.04
 
-ENTRYPOINT ["/usr/bin/ab"]
+RUN apt update
+RUN apt install apache2-utils -y

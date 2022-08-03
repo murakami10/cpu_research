@@ -2,16 +2,14 @@ package main
 
 import (
 	"fmt"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"math/rand"
 	"net/http"
 	"time"
-
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 )
 
 func randomPlus() int {
-	rand.Seed(time.Now().UnixNano())
 
 	var ans int
 	for i := 0; i < 1000; i++ {
@@ -19,8 +17,7 @@ func randomPlus() int {
 
 		ans += r
 
-		r2 := rand.Intn(10000)
-		if ans > r2 {
+		if ans > 500 {
 			ans = 0
 		}
 	}
@@ -35,7 +32,7 @@ func stressCPU(c echo.Context) error {
 	for i := 0; i < 1000; i++ {
 		ans += randomPlus()
 
-		if ans > 10000 {
+		if ans > 1000000 {
 			ans = 0
 		}
 	}
@@ -47,6 +44,7 @@ func stressCPU(c echo.Context) error {
 
 func main() {
 	e := echo.New()
+	rand.Seed(time.Now().UnixNano())
 
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
