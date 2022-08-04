@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: az1-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+      region: az1
+  template:
+    metadata:
+      labels:
+        app: server
+        region: az1
+    spec:
+      containers:
+        - image: docker.io/mkyo114/az1-serve:v1
+          name: go-server
+          ports:
+            - containerPort: 80
+      nodeSelector:
+        kubernetes.io/hostname: "az1-server"

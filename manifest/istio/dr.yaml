@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: server
+spec:
+  host: server
+  subsets:
+    - labels:
+        region: az1
+      name: az1
+    - labels:
+        region: az2
+      name: az2
