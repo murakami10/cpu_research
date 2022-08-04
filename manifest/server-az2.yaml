@@ -20,4 +20,4 @@ spec:
           ports:
             - containerPort: 80
       nodeSelector:
-        kubernetes.io/hostname: "az2-server"
+        kubernetes.io/hostname: node5-server-az2
