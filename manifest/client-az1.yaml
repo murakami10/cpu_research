@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: az1-client-node1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-node1
+      region: az1
+  template:
+    metadata:
+      labels:
+        app: client-node1
+        region: az1
+    spec:
+      containers:
+        - image: docker.io/mkyo114/az1-client:v1
+          name: client-node1
+      nodeSelector:
+        kubernetes.io/hostname: node1-client-az1
