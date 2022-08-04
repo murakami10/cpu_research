@@ -15,7 +15,7 @@ spec:
         region: az1
     spec:
       containers:
-        - image: docker.io/mkyo114/az1-client:v1
+        - image: docker.io/mkyo114/az1-client-linux:v1
           name: client-node1
       nodeSelector:
         kubernetes.io/hostname: node1-client-az1
