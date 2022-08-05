@@ -6,15 +6,19 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 	"math/rand"
 	"net/http"
+	"time"
 )
 
 func stressCPU(c echo.Context) error {
 
 	var ans int
 	r := rand.Intn(1000)
-	for i := 0; i < 1000000; i++ {
+	loop := 10000000
+	for i := 0; i < loop; i++ {
 		ans += r
-		fmt.Print(ans)
+		if  i == loop/2 {
+			fmt.Print(ans)
+		}
 	}
 
 	resp := fmt.Sprintf("Done! %d", ans)
@@ -25,9 +29,10 @@ func stressCPU(c echo.Context) error {
 func main() {
 	e := echo.New()
 
+	rand.Seed(time.Now().UnixNano())
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
 	e.GET("/", stressCPU)
-	e.Logger.Fatal(e.Start(":80"))
+	e.Logger.Fatal(e.Start(":12345"))
 }
