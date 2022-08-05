@@ -15,7 +15,7 @@ spec:
         region: az1
     spec:
       containers:
-        - image: docker.io/mkyo114/az1-serve-linux:v2
+        - image: docker.io/mkyo114/az1-serve-linux:v3
           name: go-server
           ports:
             - containerPort: 80
