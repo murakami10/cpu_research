@@ -34,5 +34,5 @@ func main() {
 	e.Use(middleware.Recover())
 
 	e.GET("/", stressCPU)
-	e.Logger.Fatal(e.Start(":12345"))
+	e.Logger.Fatal(e.Start(":80"))
 }
