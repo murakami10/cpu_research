@@ -15,7 +15,7 @@ spec:
         region: az1
     spec:
       containers:
-        - image: docker.io/mkyo114/az1-client-linux:v1
+        - image: docker.io/mkyo114/az1-client-linux:v2
           name: client-node1
           command: [ "/bin/bash", "-c", "--" ]
           args: [ "while true; do sleep 30; done;" ]
