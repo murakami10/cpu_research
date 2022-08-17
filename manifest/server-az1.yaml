@@ -15,8 +15,8 @@ spec:
         region: az1
     spec:
       containers:
-        - image: docker.io/mkyo114/az1-serve-linux:v4
-          name: go-server
+        - image: nginx
+          name: nginx
           ports:
             - containerPort: 80
       nodeSelector:

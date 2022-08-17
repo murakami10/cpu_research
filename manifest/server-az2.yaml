@@ -15,8 +15,8 @@ spec:
         region: az2
     spec:
       containers:
-        - image: docker.io/mkyo114/az2-serve-linux:v4
-          name: go-server
+        - image: nginx
+          name: nginx
           ports:
             - containerPort: 80
       nodeSelector:
