@@ -19,5 +19,9 @@ spec:
           name: nginx
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "1024Mi"
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
