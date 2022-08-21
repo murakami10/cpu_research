@@ -15,7 +15,7 @@ spec:
         region: az1
     spec:
       containers:
-        - image: nginx
+        - image: mkyo114/az1-nginx:v1
           name: nginx
           ports:
             - containerPort: 80
