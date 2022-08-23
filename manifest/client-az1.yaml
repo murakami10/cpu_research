@@ -50,5 +50,12 @@ spec:
           name: client-node3
           command: [ "/bin/bash", "-c", "--" ]
           args: [ "while true; do sleep 30; done;" ]
+          resources:
+            requests:
+              cpu: "2000m"
+              memory: "1024Mi"
+            limits:
+              cpu: "2000m"
+              memory: "1024Mi"
       nodeSelector:
         kubernetes.io/hostname: node3-client-az1
