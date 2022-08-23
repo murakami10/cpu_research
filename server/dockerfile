@@ -1,3 +1,6 @@
 FROM nginx:latest
 
+RUN apt update
+RUN apt-get install -y procps
+
 ADD ./src /usr/share/nginx/html
