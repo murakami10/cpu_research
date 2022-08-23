@@ -25,22 +25,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: az1-client-node1
+  name: az1-client-node3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client-node1
+      app: client-node3
       region: az1
   template:
     metadata:
       labels:
-        app: client-node1
+        app: client-node3
         region: az1
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
-          name: client-node1
+          name: client-node3
           command: [ "/bin/bash", "-c", "--" ]
           args: [ "while true; do sleep 30; done;" ]
       nodeSelector:
