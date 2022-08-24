@@ -21,10 +21,10 @@ spec:
             - containerPort: 80
           resources:
             requests:
-              cpu: "200m"
+              cpu: "300m"
               memory: "1024Mi"
             limits:
-              cpu: "200m"
+              cpu: "300m"
               memory: "1024Mi"
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
