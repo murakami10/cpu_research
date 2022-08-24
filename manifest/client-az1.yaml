@@ -13,6 +13,8 @@ spec:
       labels:
         app: client-node1
         region: az1
+      annotations:
+        sidecar.istio.io/proxyCPULimit: "4"
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
@@ -21,10 +23,10 @@ spec:
           args: [ "while true; do sleep 30; done;" ]
           resources:
             requests:
-              cpu: "2000m"
+              cpu: "1000m"
               memory: "1024Mi"
             limits:
-              cpu: "2000m"
+              cpu: "1000m"
               memory: "1024Mi"
       nodeSelector:
         kubernetes.io/hostname: node1-client-az1
@@ -44,6 +46,8 @@ spec:
       labels:
         app: client-node3
         region: az1
+      annotations:
+        sidecar.istio.io/proxyCPULimit: "4"
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
@@ -52,10 +56,10 @@ spec:
           args: [ "while true; do sleep 30; done;" ]
           resources:
             requests:
-              cpu: "2000m"
+              cpu: "1000m"
               memory: "1024Mi"
             limits:
-              cpu: "2000m"
+              cpu: "1000m"
               memory: "1024Mi"
       nodeSelector:
         kubernetes.io/hostname: node3-client-az1
