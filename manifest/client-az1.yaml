@@ -14,7 +14,7 @@ spec:
         app: client-node1
         region: az1
       annotations:
-        sidecar.istio.io/proxyCPULimit: "4"
+        sidecar.istio.io/proxyCPULimit: "4000m"
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
@@ -47,7 +47,7 @@ spec:
         app: client-node3
         region: az1
       annotations:
-        sidecar.istio.io/proxyCPULimit: "4"
+        sidecar.istio.io/proxyCPULimit: "4000m"
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
