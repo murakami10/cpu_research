@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: az1-server
-  annotations:
-    sidecar.istio.io/proxyCPULimit: "4"
 spec:
   replicas: 1
   selector:
@@ -15,6 +13,8 @@ spec:
       labels:
         app: server
         region: az1
+      annotations:
+        sidecar.istio.io/proxyCPULimit: "4"
     spec:
       containers:
         - image: mkyo114/az1-nginx:v3
