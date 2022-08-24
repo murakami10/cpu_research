@@ -14,8 +14,8 @@ spec:
         app: server
         region: az2
       annotations:
-        sidecar.istio.io/proxyCPULimit: "3000m"
-        proxy.istio.io/config: 'concurrency: 3'
+        sidecar.istio.io/proxyCPULimit: "4000m"
+        proxy.istio.io/config: 'concurrency: 4'
     spec:
       containers:
         - image: mkyo114/az2-nginx:v3
