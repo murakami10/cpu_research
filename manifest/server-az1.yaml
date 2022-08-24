@@ -14,7 +14,7 @@ spec:
         app: server
         region: az1
       annotations:
-        sidecar.istio.io/proxyCPULimit: "4000m"
+        sidecar.istio.io/proxyCPULimit: "3000m"
     spec:
       containers:
         - image: mkyo114/az1-nginx:v3
