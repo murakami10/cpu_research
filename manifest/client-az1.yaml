@@ -67,17 +67,17 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: az1-client-node3
+  name: az1-client-node5
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client-node3
+      app: client-node5
       region: az1
   template:
     metadata:
       labels:
-        app: client-node3
+        app: client-node5
         region: az1
       annotations:
         sidecar.istio.io/proxyCPULimit: "4000m"
