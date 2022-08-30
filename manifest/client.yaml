@@ -15,6 +15,7 @@ spec:
         region: az1
       annotations:
         sidecar.istio.io/proxyCPULimit: "4000m"
+        proxy.istio.io/config: 'concurrency: 4'
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
