@@ -17,7 +17,7 @@ spec:
       containers:
       - image: lachlanevenson/k8s-kubectl:v1.17.17
         name: watcher
-        command: [ "/bin/bash", "-c", "--" ]
+        command: [ "/bin/sh", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
