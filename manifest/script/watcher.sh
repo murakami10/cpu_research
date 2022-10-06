@@ -5,7 +5,7 @@ status=100
 while true;
 do
    sleep 1
-   res=`kubectl top pods --selector="region=$1,app=$2"`
+   res=`kubectl top pods --selector="region=$1,app=$2" --use-protocol-buffers`
    usage=`echo ${res} | awk 'NR != 1 {sum += substr($2, 0, index($2,"m")-1)} END {print sum/(NR-1)}'`
 
    if [ ${usage} -ge 400 && ${status} -ne 80 ]; then
