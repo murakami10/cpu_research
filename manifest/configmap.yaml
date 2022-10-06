@@ -44,9 +44,8 @@ data:
     while true;
     do
        sleep 1
-       res=`kubectl top pods --selector="region=$1,app=$2" --use-protocol-buffers`
-       echo $res
-       echo ${res} | awk 'NR != 1 {sum += substr($2, 0, index($2,"m")-1)} END {print sum, sum/(NR-1), (NR-1)}'
+       res=`kubectl top pods --selector="region=$1,app=$2" --use-protocol-buffers > /tmp/tmp_pods.txt`
+       usage=`awk 'NR != 1 {sum += substr($2, 0, index($2,"m")-1)} END {print sum/(NR-1)}' < /tmp/tmp_pods.txt`
 
        if [ ${usage} -ge 400 && ${status} -ne 80 ]; then
          kubectl apply -f vs-80.yaml
