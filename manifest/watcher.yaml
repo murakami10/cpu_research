@@ -16,12 +16,12 @@ spec:
     spec:
       serviceAccountName: watcher
       containers:
-      - image: lachlanevenson/k8s-kubectl:v1.17.17
+      - image: lachlanevenson/k8s-kubectl:v1.21.14
         name: watcher
         command: [ "/bin/sh", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
         volumeMounts:
-          - mountPath: /root
+          - mountPath: /home
             name: watcher-script
       volumes:
         - name: watcher-script
@@ -29,4 +29,3 @@ spec:
             name: watcher-script
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
-

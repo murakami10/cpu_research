@@ -4,3 +4,5 @@ configMapGenerator:
   - name: watcher-script
     files:
       - script/watcher.sh
+      - script/vs-80.yaml
+      - script/vs-100.yaml
