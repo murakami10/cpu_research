@@ -20,6 +20,13 @@ spec:
         name: watcher
         command: [ "/bin/sh", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
+        volumeMounts:
+          - mountPath: /root
+            name: watcher-script
+      volumes:
+        - name: watcher-script
+          configMap:
+            name: watcher-script
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
 
