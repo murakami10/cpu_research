@@ -26,7 +26,7 @@ spec:
       volumes:
         - name: watcher-script
           configMap:
-            name: wathcer-script
+            name: watcher-script
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
 
