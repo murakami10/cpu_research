@@ -1,0 +1,7 @@
+NAME                                CPU(cores)   MEMORY(bytes)
+az1-client-node1-7c9d87465f-jtlw8   7m           39Mi
+az1-client-node3-774f869df-c9cq4    8m           38Mi
+az1-client-node5-7f8777bb49-4xkz6   6m           38Mi
+az1-server-784874668-clzsh          9m           47Mi
+az1-watcher-68f7c58fc5-wznxj        10m          39Mi
+az2-server-8d867cf9d-655g2          7m           46Mi
