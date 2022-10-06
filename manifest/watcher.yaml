@@ -20,6 +20,8 @@ spec:
         name: watcher
         command: [ "/bin/sh", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
+        securityContext:
+          readOnlyRootFilesystem: false
         volumeMounts:
           - mountPath: /home
             name: watcher-script

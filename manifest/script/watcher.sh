@@ -5,8 +5,8 @@ status=100
 while true;
 do
    sleep 1
-   kubectl top pods --selector="region=$1,app=$2" > tmp_pods.txt
-   usage=`awk 'NR != 1 {sum += substr($2, 0, index($2,"m")-1)} END {print sum/(NR-1)}' tmp_pods.txt`
+   res=`kubectl top pods --selector="region=$1,app=$2"`
+   usage=`echo ${res} | awk 'NR != 1 {sum += substr($2, 0, index($2,"m")-1)} END {print sum/(NR-1)}'`
 
    if [ ${usage} -ge 400 && ${status} -ne 80 ]; then
      kubectl apply -f vs-80.yaml
