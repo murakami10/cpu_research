@@ -1,4 +1,4 @@
-kubectl exec $1 --stdin  --tty  -- "
+kubectl exec -i $1 sh << EOC
 for i in `seq 1 9`
 do
   echo ""
@@ -7,4 +7,4 @@ do
   wrk -t 1 -c 25 -d 10 http://server:80/
   date
 done
-"
+EOC
