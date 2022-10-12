@@ -1,4 +1,4 @@
-kubectl exec -i $1 sh << EOC
+kubectl exec -i $1 -- /bin/sh << EOC
 for i in `seq 1 9`
 do
   echo ""
