@@ -1,6 +1,5 @@
-kubectl exec -i $1 -- /bin/sh << EOC
-for i in `seq 1 9`
-do
+kubectl exec -i $1 -- /bin/sh << 'EOC'
+for i in `seq 1 9`; do
   echo ""
   echo $i "回目"
   date
