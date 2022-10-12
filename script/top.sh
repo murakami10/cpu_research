@@ -10,3 +10,4 @@ for i in `seq 1 14`; do
   sleep 10
 done
 
+python3 cpu.py
