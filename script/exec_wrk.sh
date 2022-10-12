@@ -8,5 +8,5 @@ for i in `seq 1 12`; do
   wrk -t 1 -c 30 -d 10 http://server:80/
   date
 done
-EOC >> result/result.txt
+'EOC'
 
