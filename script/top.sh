@@ -4,7 +4,7 @@ echo "" > result/cpu.txt
 
 for i in `seq 1 14`; do
   echo "" >> result/cpu.txt
-  date "" >> result/cpu.txt
+  date  >> result/cpu.txt
   kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
   sleep 10
 done
