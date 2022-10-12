@@ -4,6 +4,6 @@ while :
 do
   echo ""
   date
-  kubectl top pods $1 --use-protocol-buffers --containers --selector="region=az1,app=server"
+  kubectl top pods $1 --use-protocol-buffers --containers
   sleep 15
 done

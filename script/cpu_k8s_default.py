@@ -4,5 +4,5 @@ with open("./cpu.txt") as f:
 
 s = text.split()
 
-for i in range(9):
+for i in range(3):
     print(s[i * 30 + 24]+","+s[i * 30 + 28])
