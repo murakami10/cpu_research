@@ -1,4 +1,4 @@
-kubectl exec $1 --stdin  --tty  -- /bin/sh -c "
+kubectl exec $1 --stdin  --tty  -- "
 for i in `seq 1 9`
 do
   echo ""
