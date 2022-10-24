@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: az1-server
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: server
@@ -30,4 +30,4 @@ spec:
               cpu: "450m"
               memory: "1024Mi"
       nodeSelector:
-        kubernetes.io/hostname: node2-server-az1
+        kind: server
