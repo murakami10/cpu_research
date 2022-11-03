@@ -2,7 +2,7 @@
 
 echo "" > result/cpu.txt
 
-for i in `seq 1 14`; do
+for i in `seq 1 7`; do
   echo $i
   echo "" >> result/cpu.txt
   date  >> result/cpu.txt
@@ -10,4 +10,17 @@ for i in `seq 1 14`; do
   sleep 10
 done
 
+kubectl apply -f vs.yaml
+
+for i in `seq 1 7`; do
+  echo $i
+  echo "" >> result/cpu.txt
+  date  >> result/cpu.txt
+  kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
+  sleep 10
+done
+
+kubectl apply -f vs_default.yaml
+
 python3 cpu.py
+
