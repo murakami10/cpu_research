@@ -1,5 +1,5 @@
 
-with open("./result/cpu.txt") as f:
+with open("experiment1/result/cpu.txt") as f:
     text = f.read()
 
 s = text.split()

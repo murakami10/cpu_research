@@ -1,5 +1,5 @@
 
-with open("./result.txt") as f:
+with open("result.txt") as f:
     text = f.read()
 
 s = text.split()

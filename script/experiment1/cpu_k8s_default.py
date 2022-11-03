@@ -1,5 +1,5 @@
 
-with open("./cpu.txt") as f:
+with open("cpu.txt") as f:
     text = f.read()
 
 s = text.split()
