@@ -2,7 +2,7 @@
 
 echo "" > result/cpu.txt
 
-for i in `seq 1 7`; do
+for i in `seq 1 6`; do
   echo $i
   echo "" >> result/cpu.txt
   date  >> result/cpu.txt
@@ -12,7 +12,7 @@ done
 
 kubectl apply -f vs.yaml
 
-for i in `seq 1 7`; do
+for i in `seq 1 8`; do
   echo $i
   echo "" >> result/cpu.txt
   date  >> result/cpu.txt

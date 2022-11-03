@@ -30,4 +30,4 @@ spec:
               cpu: "450m"
               memory: "1024Mi"
       nodeSelector:
-        kind: server
+        kubernetes.io/hostname: node2-server-az1
