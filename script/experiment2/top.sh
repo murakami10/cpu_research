@@ -9,7 +9,7 @@ for i in `seq 1 2`; do
     echo $j
     echo "" >> result/cpu_$i.txt
     date  >> result/cpu_$i.txt
-    kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
+    kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu_$i.txt
     sleep 5
   done
 
@@ -19,7 +19,7 @@ for i in `seq 1 2`; do
     echo $j
     echo "" >> result/cpu_$i.txt
     date  >> result/cpu_$i.txt
-    kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
+    kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu_$i.txt
     sleep 5
   done
 
