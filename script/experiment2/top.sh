@@ -25,4 +25,8 @@ for i in `seq 1 2`; do
 
   kubectl apply -f vs_default.yaml
 
+  echo ""
+  echo "--------------------------------"
+  echo ""
+
 done
