@@ -3,7 +3,7 @@
 
 for i in `seq 1 2`; do
 
-  touch result/cpu_{$i}.txt
+  echo "" > result/cpu_$i.txt
 
   for j in `seq 1 2`; do
     echo $j
