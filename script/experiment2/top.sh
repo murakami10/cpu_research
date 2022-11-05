@@ -7,8 +7,8 @@ for i in `seq 1 2`; do
 
   for j in `seq 1 2`; do
     echo $j
-    echo "" >> result/cpu_{$i}.txt
-    date  >> result/cpu.txt
+    echo "" >> result/cpu_$i.txt
+    date  >> result/cpu_$i.txt
     kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
     sleep 5
   done
@@ -17,13 +17,12 @@ for i in `seq 1 2`; do
 
   for j in `seq 1 2`; do
     echo $j
-    echo "" >> result/cpu_{$i}.txt
-    date  >> result/cpu_{$i}.txt
+    echo "" >> result/cpu_$i.txt
+    date  >> result/cpu_$i.txt
     kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
     sleep 5
   done
 
   kubectl apply -f vs_default.yaml
 
-end
-
+done
