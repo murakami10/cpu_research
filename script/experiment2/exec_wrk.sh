@@ -2,7 +2,7 @@ echo "" > result/result.txt
 
 kubectl exec -i $1 -- /bin/sh <<  'EOC'
 
-  for i in `seq 1 1`; do
+  for i in `seq 1 4`; do
 
    client=$((10 * $i))
 
@@ -16,7 +16,7 @@ kubectl exec -i $1 -- /bin/sh <<  'EOC'
       date
     done
 
-    sleep 31.5
+    sleep 31.4
 
     echo ""
     echo "-----------------------------"
