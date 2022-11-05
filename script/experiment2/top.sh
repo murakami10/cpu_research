@@ -18,7 +18,7 @@ for i in `seq 1 2`; do
 
   kubectl apply -f vs.yaml
 
-  for j in `seq 1 8`; do
+  for j in `seq 1 10`; do
     echo $j
     echo "" >> result/cpu_$i.txt
     date  >> result/cpu_$i.txt
@@ -27,6 +27,8 @@ for i in `seq 1 2`; do
   done
 
   kubectl apply -f vs_default.yaml
+
+  sleep 20
 
   echo ""
   echo "--------------------------------"
