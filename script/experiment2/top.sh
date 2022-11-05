@@ -3,6 +3,9 @@
 
 for i in `seq 1 2`; do
 
+  echo $i
+  echo ""
+
   echo "" > result/cpu_$i.txt
 
   for j in `seq 1 2`; do
