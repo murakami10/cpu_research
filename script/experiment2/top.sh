@@ -1,26 +1,29 @@
 #!/bin/bash
 
-echo "" > result/cpu.txt
 
-for i in `seq 1 6`; do
-  echo $i
-  echo "" >> result/cpu.txt
-  date  >> result/cpu.txt
-  kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
-  sleep 10
-done
+for i in `seq 1 2`; do
 
-kubectl apply -f vs.yaml
+  touch result/cpu_{$i}.txt
 
-for i in `seq 1 8`; do
-  echo $i
-  echo "" >> result/cpu.txt
-  date  >> result/cpu.txt
-  kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
-  sleep 10
-done
+  for j in `seq 1 2`; do
+    echo $j
+    echo "" >> result/cpu_{$i}.txt
+    date  >> result/cpu.txt
+    kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
+    sleep 5
+  done
 
-kubectl apply -f vs_default.yaml
+  kubectl apply -f vs.yaml
 
-python3 cpu.py
+  for j in `seq 1 2`; do
+    echo $j
+    echo "" >> result/cpu_{$i}.txt
+    date  >> result/cpu_{$i}.txt
+    kubectl top pods $1 --use-protocol-buffers --containers >> result/cpu.txt
+    sleep 5
+  done
+
+  kubectl apply -f vs_default.yaml
+
+end
 
