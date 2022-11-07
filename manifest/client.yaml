@@ -69,25 +69,25 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: az1-client-node5
+  name: az2-client-node4
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client-node5
-      region: az1
+      app: client-node4
+      region: az2
   template:
     metadata:
       labels:
-        app: client-node5
-        region: az1
+        app: client-node4
+        region: az2
       annotations:
         sidecar.istio.io/proxyCPULimit: "4000m"
         proxy.istio.io/config: 'concurrency: 4'
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
-          name: client-node3
+          name: client-node4
           command: [ "/bin/bash", "-c", "--" ]
           args: [ "while true; do sleep 30; done;" ]
           resources:
