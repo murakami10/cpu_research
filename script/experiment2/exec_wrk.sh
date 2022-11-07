@@ -5,6 +5,7 @@ kubectl exec -i $1 -- /bin/sh <<  'EOC'
   for i in `seq 1 4`; do
 
    client=$((10 * $i))
+#  client=$((10 * ($i+4)))
 
     echo "client: " $client
 
