@@ -17,7 +17,7 @@ kubectl exec -i $1 -- /bin/sh <<  'EOC'
       date
     done
 
-    sleep 29
+    sleep 39
 
 
     echo ""
