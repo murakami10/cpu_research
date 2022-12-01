@@ -14,8 +14,8 @@ spec:
         app: server
         region: az1
       annotations:
-        sidecar.istio.io/proxyCPULimit: "8000m"
-        proxy.istio.io/config: 'concurrency: 8'
+        sidecar.istio.io/proxyCPULimit: "10000m"
+        proxy.istio.io/config: 'concurrency: 10'
     spec:
       containers:
         - image: mkyo114/az1-nginx:v3
@@ -24,10 +24,10 @@ spec:
             - containerPort: 80
           resources:
             requests:
-              cpu: "450m"
-              memory: "1024Mi"
+              cpu: "4000m"
+              memory: "2048Mi"
             limits:
-              cpu: "450m"
-              memory: "1024Mi"
+              cpu: "4000m"
+              memory: "2048Mi"
       nodeSelector:
         kubernetes.io/hostname: node2-server-az1
