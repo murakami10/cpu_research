@@ -14,8 +14,9 @@ spec:
         app: client-node1
         region: az1
       annotations:
-        sidecar.istio.io/proxyCPULimit: "10000m"
-        proxy.istio.io/config: 'concurrency: 10'
+        sidecar.istio.io/proxyCPULimit: "16000m"
+        sidecar.istio.io/proxyMemory: "1Gi"
+        proxy.istio.io/config: 'concurrency: 16'
     spec:
       containers:
         - image: docker.io/mkyo114/az1-client-linux:v2
