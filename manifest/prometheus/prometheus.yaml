@@ -1,0 +1,13 @@
+
+alertmanager:
+  enabled: false
+kubeStateMetrics:
+  enabled: false
+pushgateway:
+  enabled: false
+nodeExporter:
+  enabled: false
+
+server:
+  service:
+    servicePort: 9090
