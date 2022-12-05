@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: prometheus-server
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: prometheus-server
+  nfs:
+    server: 163.221.29.141
+    path: /mnt/share/nfs/prometheus/server
