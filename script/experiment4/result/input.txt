@@ -1,0 +1,97 @@
+client:  10
+
+1 回目
+Thu Dec  8 21:07:14 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.77ms    7.94ms  87.31ms   84.71%
+    Req/Sec     1.37k   164.11     1.72k    81.00%
+  13671 requests in 10.00s, 1.28GB read
+Requests/sec:   1366.47
+Transfer/sec:    130.74MB
+Thu Dec  8 21:07:24 UTC 2022
+
+2 回目
+Thu Dec  8 21:07:24 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.59ms    7.70ms  85.60ms   84.74%
+    Req/Sec     1.41k   143.32     1.70k    74.00%
+  14007 requests in 10.00s, 1.31GB read
+Requests/sec:   1400.17
+Transfer/sec:    133.96MB
+Thu Dec  8 21:07:34 UTC 2022
+
+3 回目
+Thu Dec  8 21:07:34 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.59ms    7.76ms  87.79ms   84.73%
+    Req/Sec     1.41k   143.23     1.76k    69.00%
+  14009 requests in 10.01s, 1.31GB read
+Requests/sec:   1399.74
+Transfer/sec:    133.92MB
+Thu Dec  8 21:07:44 UTC 2022
+
+4 回目
+Thu Dec  8 21:07:44 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.53ms    7.60ms  85.49ms   84.20%
+    Req/Sec     1.43k   134.72     1.85k    76.00%
+  14200 requests in 10.00s, 1.33GB read
+Requests/sec:   1419.56
+Transfer/sec:    135.82MB
+Thu Dec  8 21:07:54 UTC 2022
+
+5 回目
+Thu Dec  8 21:07:54 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.69ms    7.84ms  86.92ms   84.70%
+    Req/Sec     1.38k   174.71     1.72k    72.00%
+  13781 requests in 10.00s, 1.29GB read
+Requests/sec:   1377.67
+Transfer/sec:    131.81MB
+Thu Dec  8 21:08:04 UTC 2022
+
+6 回目
+Thu Dec  8 21:08:04 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.50ms    7.62ms  85.09ms   84.57%
+    Req/Sec     1.43k   138.06     1.77k    80.00%
+  14229 requests in 10.01s, 1.33GB read
+Requests/sec:   1422.00
+Transfer/sec:    136.05MB
+Thu Dec  8 21:08:14 UTC 2022
+
+7 回目
+Thu Dec  8 21:08:14 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.67ms    8.04ms 127.28ms   85.12%
+    Req/Sec     1.40k   148.53     1.84k    74.00%
+  13942 requests in 10.01s, 1.30GB read
+Requests/sec:   1393.45
+Transfer/sec:    133.32MB
+Thu Dec  8 21:08:24 UTC 2022
+
+8 回目
+Thu Dec  8 21:08:24 UTC 2022
+Running 10s test @ http://server:80/
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     8.67ms    7.88ms 127.18ms   84.77%
+    Req/Sec     1.39k   141.85     1.73k    70.00%
+  13792 requests in 10.00s, 1.29GB read
+Requests/sec:   1379.06
+Transfer/sec:    131.94MB
+Thu Dec  8 21:08:35 UTC 2022
