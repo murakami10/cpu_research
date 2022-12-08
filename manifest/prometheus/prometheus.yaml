@@ -10,7 +10,7 @@ nodeExporter:
 
 server:
   global:
-    scrape_interval: 5s
+    scrape_interval: 15s
   service:
     servicePort: 9090
   persistentVolume:
