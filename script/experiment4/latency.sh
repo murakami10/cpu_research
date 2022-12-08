@@ -24,7 +24,7 @@ for i in `seq 1 7`; do
 
   done
 
-  sleep 9.9
+  sleep 6.5
 
   echo ""
   echo "--------------------------------"
