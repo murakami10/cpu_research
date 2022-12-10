@@ -1,8 +1,8 @@
-portion = ""
+portion = "91"
 
 for i in range(14):
 
-    with open(f"result/${portion}/cpu/cpu_${i+1}.txt") as f:
+    with open(f"result/{portion}/cpu/cpu_{i+1}.txt") as f:
         text = f.read()
 
     s = text.split()
