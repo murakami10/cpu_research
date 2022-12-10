@@ -10,8 +10,8 @@ spec:
      - destination:
          host: server
          subset: az1
-       weight: 100
+       weight: 70
      - destination:
          host: server
          subset: az2
-       weight: 0
+       weight: 30
