@@ -5,7 +5,7 @@ with open(f"result/${portion}/result/input.txt") as f:
     text = f.read()
 
 for i, value in enumerate(text.split("----------------------------------------------------------------------------")):
-    if i == 7:
+    if i == 14:
         break
     with open(f"result/${portion}/result/result_{i + 1}.txt", mode="w") as f:
         f.write(value)
