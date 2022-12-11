@@ -1,3 +1,5 @@
+import re
+s = 'Socket.*?timeout \d+'
 
 portion = "91"
 
