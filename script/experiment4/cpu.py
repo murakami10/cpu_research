@@ -2,6 +2,9 @@ portion = "91"
 
 for i in range(14):
 
+    print((i+1)* 10)
+    print()
+
     with open(f"result/{portion}/cpu/cpu_{i+1}.txt") as f:
         text = f.read()
 

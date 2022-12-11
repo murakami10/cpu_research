@@ -11,6 +11,7 @@ for i, value in enumerate(text.split("------------------------------------------
         f.write(value)
 
     print(i+1)
+    print()
 
     t = value[2:].split()
     for i in range(8):
