@@ -7,7 +7,8 @@ for i in `seq 1 14`; do
 
   bash exec_wrk.sh $1 $i 91 &
   bash top.sh $i 91 &
-  bash latency.sh 91 &
+   bash latency.sh 91 &
+#  bash latency96.sh 91 &
 
   wait
 
@@ -24,7 +25,8 @@ for i in `seq 1 14`; do
 
   bash exec_wrk.sh $1 $i 82 &
   bash top.sh $i 82 &
-  bash latency.sh 82 &
+   bash latency.sh 82 &
+#  bash latency96.sh 82 &
 
   wait
 
@@ -41,7 +43,8 @@ for i in `seq 1 14`; do
 
   bash exec_wrk.sh $1 $i 73 &
   bash top.sh $i 73 &
-  bash latency.sh 73 &
+   bash latency.sh 73 &
+#  bash latency96.sh 73 &
 
   wait
 
@@ -57,7 +60,8 @@ for i in `seq 1 14`; do
 
   bash exec_wrk.sh $1 $i 64 &
   bash top.sh $i 64 &
-  bash latency.sh 64 &
+   bash latency.sh 64 &
+#  bash latency96.sh 64 &
 
   wait
 
