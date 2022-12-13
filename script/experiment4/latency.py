@@ -11,4 +11,4 @@ for i in range(11):
 
     for j in range(14):
         s += str((i+9)*10) + "," + str(list(filter(None,ts[j].splitlines()))[i]) + ","
-    print(s)
+    print(s[:-1])
