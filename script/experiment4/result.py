@@ -15,9 +15,9 @@ for i, value in enumerate(text.split("------------------------------------------
     print(i+1)
     print()
 
-    t = re.sub(s, '', value)[2:].split()
+    t = re.sub(s, '', value).split()[2:]
     for i in range(8):
-        print(t[i * 51 + 44] + "," + t[i * 51 + 28][:-2] + "," + t[i * 51 + 37])
+        print(t[i * 50 + 41] + "," + t[i * 50 + 25][:-2] + "," + t[i * 50 + 34])
 
     print()
     print()
