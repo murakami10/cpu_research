@@ -36,6 +36,6 @@ for i in `seq 1 11`; do
 done
 
 
-echo "" >> result/$1/latency/latency.txt
-echo "--------------------------------" >> result/$1/latency/latency.txt
-echo "" >> result/$1/latency/latency.txt
+echo "" >> result/$2/$1/latency/latency.txt
+echo "--------------------------------" >> result/$2/$1/latency/latency.txt
+echo "" >> result/$2/$1/latency/latency.txt

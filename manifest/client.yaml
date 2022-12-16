@@ -69,7 +69,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: az2-client-node4
+  name: az1-client-node4
 spec:
   replicas: 1
   selector:
