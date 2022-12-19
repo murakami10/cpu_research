@@ -14,7 +14,6 @@ for portion in portions:
     with open(f"result/{latency}/{portion}/result/result_{client}.txt") as f:
         result = f.read()
 
-    print(client)
     print()
 
     t = re.sub(s, '', result).split()[2:]
@@ -22,7 +21,7 @@ for portion in portions:
     for i in range(8):
         print(t[i * 50 + 41] + "," + t[i * 50 + 25][:-2] + "," + t[i * 50 + 34])
 
-        if i < 4:
+        if i > 3:
             avg += t[i*50 + 41]
 
     if best_avg < avg:
