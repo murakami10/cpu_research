@@ -1,6 +1,7 @@
 
-portion = "91"
-with open(f"result/{portion}/latency/latency.txt") as f:
+portion = "9505"
+latency = "40"
+with open(f"result/{latency}/{portion}/latency/latency.txt") as f:
     text = f.read()
 
 
