@@ -1,14 +1,15 @@
 import re
 s = 'Socket.*?timeout \d+'
 
-portion = "91"
+portion = "9505"
+latency = "40"
 
 cpus = []
 
 for i in range(14):
 
 
-    with open(f"result/{portion}/cpu/cpu_{i+1}.txt") as f:
+    with open(f"result/{latency}/{portion}/cpu/cpu_{i+1}.txt") as f:
         cpu = f.read()
 
     c = cpu.split()
@@ -18,7 +19,7 @@ for i in range(14):
 
 
 
-with open(f"result/{portion}/result/input.txt") as f:
+with open(f"result/{latency}/{portion}/result/input.txt") as f:
     inp = f.read()
 
 results = []
