@@ -27,7 +27,7 @@ results = []
 for i, value in enumerate(inp.split("----------------------------------------------------------------------------")):
     if i == 14:
         break
-    with open(f"result/{portion}/result/result_{i + 1}.txt", mode="w") as f:
+    with open(f"result/{latency}/{portion}/result/result_{i + 1}.txt", mode="w") as f:
         f.write(value)
 
     t = re.sub(s, '', value).split()[2:]
