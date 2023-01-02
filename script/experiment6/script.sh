@@ -1,4 +1,4 @@
 
-latency=20
+latency=10
 
 mkdir result/$latency
