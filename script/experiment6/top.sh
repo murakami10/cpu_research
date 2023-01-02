@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 i=$1
 
 echo "" > result/$1/cpu.txt
@@ -11,6 +10,4 @@ for j in `seq 1 11`; do
   kubectl top pods --use-protocol-buffers --containers >>  result/$1/cpu.txt
   sleep 10
 done
-
-kubectl apply -f vs_default.yaml
 
