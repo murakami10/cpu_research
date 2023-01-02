@@ -1,4 +1,6 @@
 
+echo "" > result/$2/input.txt
+
 (
 
 kubectl exec -i $1 -- /bin/bash << 'EOC'
