@@ -1,11 +1,9 @@
 
-clints=(10 20 30 40 50 60 70 80 90 100 110 120 130 140)
-
 (
 
 kubectl exec -i $1 -- /bin/bash << 'EOC'
 
-clints=(10 20 30 40 50 60 70 80 90 100 110 120 130 140)
+clients=(10 20 30 40 50 60 70 80 90 100 110 120 130 140)
 
 for i in `seq 1 8` do
 
@@ -29,4 +27,4 @@ echo ''
 
 
 
-)  >> result/$3/result/input.txt
+)  >> result/$2/input.txt

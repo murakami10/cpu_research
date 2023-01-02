@@ -3,12 +3,12 @@
 
 i=$1
 
-echo "" > result/$2/cpu/cpu_$i.txt
+echo "" > result/$1/cpu.txt
 
 for j in `seq 1 11`; do
-  echo "" >> result/$2/cpu/cpu_$i.txt
-  date  >> result/$2/cpu/cpu_$i.txt
-  kubectl top pods --use-protocol-buffers --containers >>  result/$2/cpu/cpu_$i.txt
+  echo "" >> result/$1/cpu.txt
+  date  >> result/$1/cpu.txt
+  kubectl top pods --use-protocol-buffers --containers >>  result/$1/cpu.txt
   sleep 10
 done
 
