@@ -22,5 +22,5 @@ t = re.sub(s, '', inp).split()[2:]
 for i in range(12):
     results.append([t[i * 50 + 39], t[i * 50 + 23][:-2], t[i * 50 + 32]])
 
-for i in range(21):
+for i in range(12):
     print(cpus[i][0]+","+cpus[i][1]+","+results[i][0]+","+results[i][1]+","+results[i][2])
