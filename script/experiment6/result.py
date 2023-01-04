@@ -1,28 +1,26 @@
 import re
 s = 'Socket.*?timeout \d+'
 
+latency = "10"
 
-latency = "5"
-portions = ["9505", "9010", "8515", "8020", "7525", "7030", "6535", "6040", "5545", "5050", "00100"]
+cpus = []
+
+with open(f"result/{latency}/cpu.txt") as f:
+    cpu = f.read()
+
+c = cpu.split()
+for i in range(21):
+    cpus.append([c[i * 50 + 40][:-1], c[i * 50 + 48][:-1]])
 
 
-for portion in portions:
-    with open(f"result/{latency}/{portion}/result/input.txt") as f:
-        text = f.read()
+with open(f"result/{latency}/input.txt") as f:
+    inp = f.read()
 
-    for i, value in enumerate(text.split("----------------------------------------------------------------------------")):
-        if i == 14:
-            break
+results = []
 
-        with open(f"result/{latency}/{portion}/result/result_{i + 1}.txt", mode="w") as f:
-            f.write(value)
+t = re.sub(s, '', inp).split()[2:]
+for i in range(21):
+    results.append([t[i * 50 + 39], t[i * 50 + 23][:-2], t[i * 50 + 32]])
 
-        print(i+1)
-        print()
-
-        t = re.sub(s, '', value).split()[2:]
-        for i in range(8):
-            print(t[i * 50 + 41] + "," + t[i * 50 + 25][:-2] + "," + t[i * 50 + 34])
-
-        print()
-        print()
+for i in range(21):
+    print(cpus[i][0]+","+cpus[i][1]+","+results[i][0]+","+results[i][1]+","+results[i][2])
