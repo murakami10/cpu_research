@@ -1,5 +1,5 @@
 
-echo "" > result/$2/input.txt
+echo "" > result/$2/$3/input.txt
 
 (
 
