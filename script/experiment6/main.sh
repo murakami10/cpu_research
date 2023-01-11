@@ -10,6 +10,12 @@ bash top.sh $latency "dynamic" &
 
 wait
 
+#kubectl apply -f vs_default.yaml
+#sleep 10
+#bash exec_wrk.sh $1 $latency 10000 &
+#bash top_fix.sh $latency 10000 &
+#wait
+
 #kubectl apply -f vs9010.yaml
 #sleep 10
 #bash exec_wrk.sh $1 $latency 9010 &
