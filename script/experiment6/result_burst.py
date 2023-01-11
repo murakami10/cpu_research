@@ -3,7 +3,7 @@ s = 'Socket.*?timeout \d+'
 
 latency = "10-burst"
 
-portions = ["dynamic", "9010", "8020", "7030", "6040"]
+portions = ["dynamic", "10000", "9010", "8020", "7030", "6040"]
 
 for portion in portions:
     print(portion)
