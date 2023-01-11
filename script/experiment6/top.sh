@@ -3,7 +3,7 @@
 echo "" > result/$1/$2/cpu.txt
 
 #10ms
-#portions=('_default' 8515 8515 7030 7030 5545 5545 5545 5545 7030 7030 8020 8020 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
+#portions=('_default' 8515 8515 6535 6535 5545 5545 5545 5545 6535 6535 8020 8020 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
 #20ms
 #portions=('_default' 9505 9505 8020 8020 7525 7525 7525 7525 8020 8020 9010 9010 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
 #40ms
