@@ -1,11 +1,12 @@
 import re
 s = 'Socket.*?timeout \d+'
 
-latency = "10"
+latency = "10-burst"
+portion = "dynamic"
 
 cpus = []
 
-with open(f"result/{latency}/cpu.txt") as f:
+with open(f"result/{latency}/{portion}/cpu.txt") as f:
     cpu = f.read()
 
 c = cpu.split()
@@ -13,7 +14,7 @@ for i in range(12):
     cpus.append([c[i * 50 + 40][:-1], c[i * 50 + 48][:-1]])
 
 
-with open(f"result/{latency}/input.txt") as f:
+with open(f"result/{latency}/{portion}/input.txt") as f:
     inp = f.read()
 
 results = []
