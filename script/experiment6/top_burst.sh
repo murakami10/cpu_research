@@ -2,6 +2,8 @@
 
 echo "" > result/$1/$2/cpu.txt
 
+#5ms
+#portions=('_default' 8020 8020 5050 5050 6535 6535 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
 #10ms
 #portions=('_default' 8515 8515 5545 5545 7525 7525 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
 #20ms
