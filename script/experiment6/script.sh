@@ -8,3 +8,4 @@ mkdir result/$latency/9010
 mkdir result/$latency/8020
 mkdir result/$latency/7030
 mkdir result/$latency/6040
+mkdir result/$latency/5050
