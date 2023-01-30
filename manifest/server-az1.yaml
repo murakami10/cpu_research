@@ -18,7 +18,7 @@ spec:
         proxy.istio.io/config: 'concurrency: 8'
     spec:
       containers:
-        - image: mkyo114/az1-nginx:v4
+        - image: mkyo114/az1-nginx:v3
           name: nginx
           ports:
             - containerPort: 80
