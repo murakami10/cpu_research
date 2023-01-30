@@ -97,19 +97,19 @@ kubectl exec -i $1 -- /bin/bash <<EOC
   echo ''
   echo '16回目'
   date
-  wrk -t 1 -c 40 -d 10 http://server:80/
+  wrk -t 1 -c 50 -d 10 http://server:80/
   date
 
   echo ''
   echo '17回目'
   date
-  wrk -t 1 -c 40 -d 10 http://server:80/
+  wrk -t 1 -c 50 -d 10 http://server:80/
   date
 
   echo ''
   echo '18回目'
   date
-  wrk -t 1 -c 40 -d 10 http://server:80/
+  wrk -t 1 -c 50 -d 10 http://server:80/
   date
 
   echo ''

@@ -9,7 +9,7 @@ echo "" > result/$1/$2/cpu.txt
 #20ms
 #portions=('_default' 9505 9505 8020 8020 7525 7525 7525 7525 8020 8020 9010 9010 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
 #40ms
-#portions=('_default' 9505 9505 9505 9505 9010 9010 9010 9010 9505 9505 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
+#portions=('_default' 9505 9505 9505 9505 9010 9010 9010 9010 9505 9505 9505 9505 '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default' '_default')
 
 for j in `seq 1 48`; do
 
