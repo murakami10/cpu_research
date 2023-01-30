@@ -42,6 +42,6 @@ wait
 
 #kubectl apply -f vs5050.yaml
 #sleep 10
-#bash exec_wrk.sh $1 $latency 6040 &
-#bash top_fix.sh $latency 6040 &
+#bash exec_wrk.sh $1 $latency 5050 &
+#bash top_fix.sh $latency 5050 &
 #wait
