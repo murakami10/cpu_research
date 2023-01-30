@@ -3,7 +3,7 @@ s = 'Socket.*?timeout \d+'
 
 latency = "10-slow"
 
-portions = ["dynamic", "10000", "9010", "8020", "7030", "6040"]
+portions = ["dynamic", "10000", "9010", "8020", "7030", "6040", "5050"]
 
 for portion in portions:
 
